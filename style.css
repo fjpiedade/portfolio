@@ -5,6 +5,7 @@
     -webkit-font-smoothing: antialiased;
     --moz-osx-font-smoothing: grayscale;
 }
+
 /* @import 'utilities.css'; */
 :root {
     font-size: 62.5%;
@@ -24,17 +25,46 @@
     --bgLight: rgb(190, 181, 181);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+:target {
+    scroll-margin-top: .5em;
+}
+
 body {
     font-family: "Poppins", sans-serif;
+    /* position: fixed; 
+    top: 0;*/
+}
+
+#indicator{
+    background-color: #FF4754;
+    height: .35rem;
+    width: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 header {
     background-color: var(--gray-900);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 94%, 0 100%);
+    align-items: center;
 }
 
 header nav {
     padding: 2rem 0;
+    align-items: center;
+}
+
+header nav .logo {
+    margin-right: .5rem;
+}
+
+header nav img:hover {
+    animation: translateY 0.8s infinite alternate;
 }
 
 header nav .left a {
@@ -50,12 +80,61 @@ header nav .left a:hover {
 }
 
 
-header nav .log {
-    margin-right: 3rem;
+.container {
+    max-width: 1151px;
+    padding: 0 15px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hero {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero .left img:hover {
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+.hero .right {
+    color: var(--white);
+    /* margin-top: -7rem; */
+}
+
+.hero .right h6 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.hero .right h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.hero .right h1 span {
+    color: var(--primary);
+}
+
+.hero .right p {
+    line-height: 1.9rem;
+    font-size: 1.4rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
 }
 
 .flex {
     display: flex;
+}
+
+.flex-1 {
+    flex: 1;
 }
 
 .items-centre {
@@ -95,10 +174,7 @@ header nav .log {
     background: transparent;
     border-color: var(--primary);
     color: var(--primary);
-}
-
-.flex-1 {
-    flex: 1;
+    animation: scaleButton 0.8s alternate infinite;
 }
 
 .btn-secondary {
@@ -110,64 +186,204 @@ header nav .log {
 .btn-secondary:hover {
     background: var(--primary);
     color: var(--secondary);
-}
-
-
-
-.container {
-    max-width: 1151px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-
-.hero {
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-}
-
-.hero .right {
-    color: var(--white);
-    margin-top: -7rem;
-}
-
-.hero .right h6 {
-    font-size: 1.6rem;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-}
-
-.hero .right h1 {
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.2;
-    margin-bottom: 2rem;
-}
-
-.hero .right h1 span {
-    color: var(--primary);
-}
-
-.hero .right p {
-    line-height: 1.9rem;
-    margin-bottom: 2rem;
+    animation: scaleButton 0.8s alternate infinite;
 }
 
 section {
     padding: 6rem;
 }
 
-section .about h1 {
+section.about h1 {
     margin-bottom: 1rem;
     font-size: 1.6rem;
     font-weight: 600;
 }
 
-section .about h1 span {
+section.about img:hover {
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+section.about h1 {
+    font-size: 3rem;
+}
+
+section.about h1 span {
     color: var(--primary);
 }
 
-section .about h3 {
-    font-size: 1rem;
+section.about h3 {
+    font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: 600;
+}
+
+section.about p {
+    /* font-family: 'Lato', sans-serif; */
+    font-size: 1.5rem;
+    color: var(--secondary);
+    line-height: 1.9rem;
+    margin-bottom: 2rem;
+}
+
+section.about .socials {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+section.about .socials a {
+    /*
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; */
+    width: 35px;
+    margin-right: 0.8rem;
+}
+
+section.about .socials a:hover {
+    /* background: var(--primary); */
+}
+
+section.about .socials i {
+    color: var(--primary);
+    margin-right: 0.8rem;
+}
+
+section.about .socials i:hover {
+    color: var(--secondary);
+    margin-right: 0.8rem;
+    animation: translateY 0.8s infinite alternate;
+}
+
+section.services {
+    background: var(--gray-900);
+}
+
+.services-head {
+    background: var(--gray-900);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 0.5rem;
+    color: var(--primary);
+}
+
+.services-head+p {
+    color: var(--white);
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-bottom: 6rem;
+    font-weight: 400;
+}
+
+.card img {
+    width: 50px;
+    background: white;
+}
+
+section.services .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
+section.services .card-grid .card {
+    background: var(--white);
+    padding: 3rem 2rem;
+    position: relative;
+    text-align: center;
+    transition: all .2s ease;
+}
+
+section.services .card-grid .card img {
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var();
+}
+
+section.services .card-grid .card h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+section.services .card-grid .card p {
+    font-family: 'Lato', sans-serif;
+    color: var(--seconday);
+    line-height: 1.6;
+}
+
+section.services .card-grid .card:hover {
+    background: var(--primary);
+}
+
+section.services .card-grid .card:hover h2 {
+    color: var(--white);
+}
+
+section.services .card-grid .card:hover p {
+    color: var(--white);
+}
+
+.btn-whatsapp img{
+    max-width: 74px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    transition: transform 0.4s;
+}
+
+.btn-whatsapp img:hover{
+    transform: scale(1.1);
+}
+
+@keyframes translateY {
+    from {
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+@keyframes scaleButton {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.07);
+    }
+}
+
+@media(max-width: 700px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .left {
+        margin-bottom: 75px;
+    }
+
+    .about .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-whatsapp img{
+        width:54px;
+    }
 }
