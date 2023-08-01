@@ -2,158 +2,243 @@
 
 <head lang="en">
 
-    <head>
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /  >
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="./style.css">
-        <title>Portfolio - Fernando Piedade</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="icon" type="image/x-icon" href="./assets/favicon_io/favicon.ico" </head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-            integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <body>
-        <div id="indicator"></div>
-        <header>
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <!-- Navigation Section -->
-                <nav class="flex items-center justify-between">
-                    <div class="left flex justify-right items-center">
-                        <div class="logo" data-aos="fade-down" data-aos-delay="300">
-                            <a href="#">
-                                <img src="./assets/raiztech.png" alt="logotype raiz tech" width="50px">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Portfolio - Fernando Piedade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon_io/favicon.ico" </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#card-carousel', {
+                perPage: 2,
+                breakpoints: {
+                    640: {
+                        perPage: 1,
+                    },
+                },
+            }).mount();
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="indicator"></div>
+    <header>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <!-- Navigation Section -->
+            <nav class="flex items-center justify-between">
+                <div class="left flex justify-right items-center">
+                    <div class="logo" data-aos="fade-down" data-aos-delay="300">
+                        <a href="#">
+                            <img src="./assets/raiztech.png" alt="logotype raiz tech" width="50px">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#skills">Skills</a>
+                    </div>
+                    <div class="right" data-aos="fade-left">
+                        <button class="btn btn-primary">Contact</button>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="hero">
+                <div class="left flex-1 justify-center" data-aos="zoom-in" data-aos-delay="100">
+                    <img data-aos="flip-up" data-aos-delay="200" data-aos-duration="1500" src="./assets/profile-1.png"
+                        alt="profile picture" width="240px"> <!--640 × 1342 -->
+                </div>
+
+                <div class="right flex-1">
+                    <h6>FERNANDO PIEDADE</h6>
+                    <h1>
+                        I am a Software
+                        <span>Developer ...</span>
+                    </h1>
+                    <p>
+                        Science enthusiast,
+                        graduated in computer science,
+                        a software developer for over 10 years.
+                        Java, JavaScript, React, React Native, Python,
+                        Php, HTML, CSS, and C.
+                    </p>
+                    <p>
+                        MySQL, Postgres, and Oracle (PL/SQL).
+                    </p>
+                    <p>Outsystems Associate Reactive Developer Certified.</p>
+                    <p>Very experienced in Telecommunications Services for over 10 years in
+                        Project Management, System Integration,
+                        System Administration of VAS platforms.</p>
+                    <div class="left" data-aos="fade-up" data-aos-delay="400">
+                        <form method="get" action="./docs/cv_resume_v2301.pdf">
+                            <button type="submit" class="btn btn-secondary" target="_blank">Download My CV</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="container flex items-center">
+            <div class="left flex-1 justify-right" data-aos="zoom-in" data-aos-delay="300">
+                <img src="./assets/code.png" alt="profile picture" height="400px">
+            </div>
+
+            <div class="right flex-1" data-aos="zoom-in" data-aos-delay="300">
+                <h1>About <span>Me</span></h1>
+                <!-- <h3>Hello! I'm FERNANDO PIEDADE</h3> -->
+                <p>
+                    I am a lover of knowledge,
+                    I am always looking to explore new areas
+                    of technology, solve problems,
+                    improve and make human life easy,
+                    safe, and pleasant, using knowledge
+                    about Software Development, Telecommunications,
+                    Systems Administration and Integration, creating
+                    sustainable technological ecosystems that add value to life.
+                </p>
+
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/fernandojoao/" target="_blank">
+                        <i class="fa-brands fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/fjpiedade" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+                    <a href="https://youtube.com/@raiztech" target="_blank"><i
+                            class="fa-brands fa-youtube fa-2x"></i></a>
+                    <a href="https://www.instagram.com/fernando.joao2011/" target="_blank"><i
+                            class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="https://www.facebook.com/fernando.joao2011" target="_blank"><i
+                            class="fa-brands fa-facebook fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="title-only" id="projects">
+        <h1>Projects Gallery</h1>
+    </div>
+    
+    <section id="card-carousel" class="splide" aria-label="Beautiful Images">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <img src="./assets/thumbnail_uk_search.png" alt="">
+                    <div class="description">
+                        <div class="text-description">
+                            <p>UK Search - System to provide services of geolocation ...</p>
+                        </div>
+                        <div class="link-description">
+                            <a href="https://www.youtube.com/shorts/iH8VI3YaXlY" target="_blank">
+                                <i class="fa fa-external-link fa-3x" aria-hidden="true"></i>
                             </a>
                         </div>
-                        <div>
-                            <a href="#home">Home</a>
-                            <a href="#about">About</a>
-                            <a href="#projects">Projects</a>
-                            <a href="#skills">Skills</a>
-                        </div>
-                        <div class="right" data-aos="fade-left">
-                            <button class="btn btn-primary">Contact</button>
-                        </div>
                     </div>
-                </nav>
+                </li>
 
-                <div class="hero">
-                    <div class="left flex-1 justify-center" data-aos="zoom-in" data-aos-delay="100">
-                        <img 
-                        data-aos="flip-up"
-                        data-aos-delay="200"
-                        data-aos-duration="1500"
-                        src="./assets/profile-1.png" alt="profile picture" width="240px"> <!--640 × 1342 -->
-                    </div>
-
-                    <div class="right flex-1">
-                        <h6>FERNANDO PIEDADE</h6>
-                        <h1>
-                            I am a Software
-                            <span>Developer ...</span>
-                        </h1>
-                        <p>
-                            Science enthusiast,
-                            graduated in computer science,
-                            a software developer for over 10 years.
-                            Java, JavaScript, React, React Native, Python,
-                            Php, HTML, CSS, and C.
-                        </p>
-                        <p>
-                            MySQL, Postgres, and Oracle (PL/SQL).
-                        </p>
-                        <p>Outsystems Associate Reactive Developer Certified.</p>
-                        <p>Very experienced in Telecommunications Services for over 10 years in
-                            Project Management, System Integration,
-                            System Administration of VAS platforms.</p>
-                        <div class="left" data-aos="fade-up" data-aos-delay="400">
-                            <form method="get" action="./docs/cv_resume_v2301.pdf">
-                                <button type="submit" class="btn btn-secondary" target="_blank">Download My CV</button>
-                            </form>
-
+                <li class="splide__slide">
+                    <img src="./assets/thumbnail_service_engineer.png" alt="">
+                    <div class="description">
+                        <div class="text-description">
+                            <p>Service Engineer Application</p>
+                        </div>
+                        <div class="link-description">
+                            <a href="https://www.youtube.com/@raiztech/" target="_blank">
+                                <i class="fa fa-external-link fa-3x" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
+                </li>
+
+                <li class="splide__slide">
+                    <img src="./assets/thumbnail_girabola.png" alt="">
+                    <div class="description">
+                        <div class="text-description">
+                            <p>Girabola - Angola National Football Champion - Application to manager all information ...</p>
+                        </div>
+                        <div class="link-description">
+                            <a href="https://github.com/fjpiedade/gest-girabola" target="_blank">
+                                <i class="fa fa-external-link fa-3x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="splide__slide">
+                    <img src="./assets/thumbnail_outsystems.png" alt="">
+                    <div class="description">
+                        <div class="text-description">
+                            <p>Projects Development using Outsystems knowledge's</p>
+                        </div>
+                        <div class="link-description">
+                            <a href="https://www.youtube.com/shorts/Dxk4UyzUdqI" target="_blank">
+                                <i class="fa fa-external-link fa-3x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="projects" class="services">
+        <h1 class="services-head">Services</h1>
+        <p>All your digital needs... covered.</p>
+        <div class="card-grid">
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <img src="./assets/code.png">
+                <h2>Graphic Desgin</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, debitis?</p>
             </div>
-        </header>
-
-        <section class="about" id="about">
-            <div class="container flex items-center">
-                <div class="left flex-1 justify-right" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="./assets/code.png" alt="profile picture" height="400px">
-                </div>
-
-                <div class="right flex-1" data-aos="zoom-in" data-aos-delay="300">
-                    <h1>About <span>Me</span></h1>
-                    <!-- <h3>Hello! I'm FERNANDO PIEDADE</h3> -->
-                    <p>
-                        I am a lover of knowledge,
-                        I am always looking to explore new areas
-                        of technology, solve problems,
-                        improve and make human life easy,
-                        safe, and pleasant, using knowledge
-                        about Software Development, Telecommunications,
-                        Systems Administration and Integration, creating
-                        sustainable technological ecosystems that add value to life.
-                    </p>
-
-                    <div class="socials">
-                        <a href="https://www.linkedin.com/in/fernandojoao/" target="_blank">
-                            <i class="fa-brands fa-linkedin fa-2x"></i>
-                        </a>
-                        <a href="https://github.com/fjpiedade" target="_blank"><i
-                                class="fa-brands fa-github fa-2x"></i></a>
-                        <a href="https://youtube.com/@raiztech" target="_blank"><i
-                                class="fa-brands fa-youtube fa-2x"></i></a>
-                        <a href="https://www.instagram.com/fernando.joao2011/" target="_blank"><i
-                                class="fa-brands fa-instagram fa-2x"></i></a>
-                        <a href="https://www.facebook.com/fernando.joao2011" target="_blank"><i
-                                class="fa-brands fa-facebook fa-2x"></i></a>
-                    </div>
-                </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <img src="./assets/code.png">
+                <h2>Web Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, debitis?</p>
             </div>
-        </section>
-
-
-        <section id="projects" class="services" data-aos="fade-up" data-aos-delay="200">
-            <div class="container">
-                <h1 class="services-head">Services</h1>
-                <p>All your digital needs... covered.</p>
-                <div class="card-grid">
-                    <div class="card" data-aos="fade-up" data-aos-delay="400">
-                        <img src="./assets/code.png">
-                        <h2>Graphic Desgin</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, debitis?</p>
-                    </div>
-                    <div class="card" data-aos="fade-up" data-aos-delay="500">
-                        <img src="./assets/code.png">
-                        <h2>Web Development</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, debitis?</p>
-                    </div>
-                    <div class="card" data-aos="fade-up" data-aos-delay="600">
-                        <img src="./assets/code.png">
-                        <h2>Content Writing</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, debitis?</p>
-                    </div>
-                </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                <img src="./assets/code.png">
+                <h2>Content Writing</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, debitis?</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer>
+    <footer>
 
-        </footer>
-        <a href="https://api.whatsapp.com/send?phone=+244921300519&text=Please%20contact%20me" class="btn-whatsapp"
-            target="_blank"
-            >
-            <img src="./assets/whatssapp.svg" alt="whatssapp button" />
-        </a>
-        <script src="./javascript.js"></script>
-    </body>
+    </footer>
+    <a href="https://api.whatsapp.com/send?phone=+244921300519&text=Please%20contact%20me" class="btn-whatsapp"
+        target="_blank">
+        <img src="./assets/whatssapp.svg" alt="whatssapp button" />
+    </a>
+    <script src="./javascript.js"></script>
+</body>
 
-    </html>
+<script>
+    new Splide('#image-carousel').mount();
+</script>
+
+</html>
