@@ -52,10 +52,11 @@ header {
     background-color: var(--gray-900);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 94%, 0 100%);
     align-items: center;
+    margin-bottom: 15rem;
 }
 
 header nav {
-    padding: 2rem 0;
+    padding: 10rem 0;
     align-items: center;
 }
 
@@ -199,7 +200,7 @@ section.about h1 {
     font-weight: 600;
 }
 
-section.about img:hover {
+section.about .left img:hover {
     animation: scaleButton 0.8s alternate infinite;
 }
 
@@ -389,10 +390,7 @@ section.services .card-grid .card:hover p {
 
 .splide {
     background-color: var(--gray-800);
-}
-
-.splide .container {
-    background-color: var(--gray-800);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 100% 100%, 0 100%);
 }
 
 .splide__slide img {
@@ -432,3 +430,29 @@ section.services .card-grid .card:hover p {
     line-height: 1.2;
     margin-bottom: 2rem;
 }
+
+
+.cards{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 25rem;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container-card {
+    padding: 2px 16px;
+  }
